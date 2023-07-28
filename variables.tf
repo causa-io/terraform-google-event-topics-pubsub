@@ -19,3 +19,21 @@ variable "gcp_region" {
   description = "The GCP region in which resources will be placed. Defaults to the `google.region` configuration."
   default     = null
 }
+
+variable "bigquery_location" {
+  type        = string
+  description = "The location of the BigQuery datasets. Defaults to the `google.pubSub.bigQueryStorage.location` configuration."
+  default     = null
+}
+
+variable "bigquery_raw_events_dataset" {
+  type        = string
+  description = "The ID of the BigQuery dataset containing the raw Pub/Sub messages for event topics. Defaults to the `google.pubSub.bigQueryStorage.rawEventsDatasetId` configuration."
+  default     = null
+}
+
+variable "deletion_protection" {
+  type        = bool
+  description = "Whether the BigQuery tables are protected against deletion. Defaults to `true`."
+  default     = true
+}
