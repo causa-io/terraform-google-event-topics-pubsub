@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+Breaking changes:
+
+- Use `JSON` and `BYTES` by default for BigQuery raw events `data` and `attributes` columns. Types can be overridden using the `bigquery_raw_events_data_type` and `bigquery_raw_events_attributes_type` variables.
+
 ## v0.1.2 (2024-08-30)
 
 Chores:
