@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.2.1 (2025-08-27)
+
 Chores:
 
 - Update the description of the BigQuery table columns.
