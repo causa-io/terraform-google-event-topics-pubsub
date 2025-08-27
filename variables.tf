@@ -37,3 +37,15 @@ variable "deletion_protection" {
   description = "Whether the BigQuery tables are protected against deletion. Defaults to `true`."
   default     = true
 }
+
+variable "bigquery_raw_events_data_type" {
+  type        = string
+  description = "The type of the `data` column in the raw events BigQuery tables. Can be `STRING`, `BYTES`, or `JSON`. Defaults to `JSON` if the `events.format` configuration is `json`, or `BYTES` otherwise."
+  default     = null
+}
+
+variable "bigquery_raw_events_attributes_type" {
+  type        = string
+  description = "The type of the `attributes` column in the raw events BigQuery tables. Can be `JSON` or `STRING`. Defaults to `JSON`."
+  default     = "JSON"
+}
