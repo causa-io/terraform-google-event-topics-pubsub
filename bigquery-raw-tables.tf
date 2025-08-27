@@ -51,7 +51,7 @@ resource "google_bigquery_table" "raw_events" {
       mode        = "NULLABLE"
       name        = "message_id"
       type        = "STRING"
-      description = "The ID of the Pub/Sub messsage."
+      description = "The ID of the Pub/Sub message."
     },
     {
       mode        = "NULLABLE"
@@ -63,13 +63,13 @@ resource "google_bigquery_table" "raw_events" {
       mode        = "REQUIRED"
       name        = "data"
       type        = local.bigquery_raw_events_data_type
-      description = "The JSON-encoded string containing the payload of the event."
+      description = "The payload of the event."
     },
     {
       mode        = "NULLABLE"
       name        = "attributes"
       type        = var.bigquery_raw_events_attributes_type
-      description = "The JSON-encoded string containing the dictionary of attributes for the message."
+      description = "The dictionary of attributes for the message."
     }
   ])
 
