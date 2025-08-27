@@ -62,13 +62,13 @@ resource "google_bigquery_table" "raw_events" {
     {
       mode        = "REQUIRED"
       name        = "data"
-      type        = "STRING"
+      type        = local.bigquery_raw_events_data_type
       description = "The JSON-encoded string containing the payload of the event."
     },
     {
       mode        = "NULLABLE"
       name        = "attributes"
-      type        = "STRING"
+      type        = var.bigquery_raw_events_attributes_type
       description = "The JSON-encoded string containing the dictionary of attributes for the message."
     }
   ])
